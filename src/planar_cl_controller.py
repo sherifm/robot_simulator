@@ -521,7 +521,7 @@ class System:
         # increment callback count
         self.callback_count += 1;
 
-        elif (op != 2): 
+        if (op != 2): 
           #we are not running, so let's just keep running the
           #initializations and exiting
             self.first_flag = True
