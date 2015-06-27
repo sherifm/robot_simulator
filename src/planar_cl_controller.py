@@ -261,7 +261,6 @@ class System:
             rospy.signal_shutdown("Frequency Mismatch!")
         # idle on startup:
         rospy.set_param("/operating_condition", 0)
-
         return
 
 
@@ -522,9 +521,9 @@ class System:
         # increment callback count
         self.callback_count += 1;
 
-        if (op != 2):
-            # we are not running, so let's just keep running the
-            # initializations and exiting
+        elif (op != 2): 
+          #we are not running, so let's just keep running the
+          #initializations and exiting
             self.first_flag = True
             # once in a while, let's send the reference path
             if not (self.callback_count%CALLBACK_DIVISOR):

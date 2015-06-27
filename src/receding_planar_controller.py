@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python
 """
 Jarvis Schultz
@@ -637,6 +638,7 @@ class System:
             self.t2 = 0.0
             self.first_flag = False
             return
+
         if not self.full_ref_flag:
             # try and fill up the array
             while self.ref_lag_count < WINDOW:
